@@ -1,0 +1,323 @@
+*{
+  color: white;
+  font-weight: 2em;
+  font-size: 1em;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+}
+
+#logo{
+  color: #0bceaf;
+  font-family: 'Poppins' ,sans-serif;
+}
+.brand{
+  color: #0bceaf;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: oblique;
+}
+i{
+  color: #0bceaf;
+  padding-bottom: 39px;
+}
+/* scroll*/
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 5px #383832;
+  border-radius:10px;
+}
+::-webkit-scrollbar-thumb{
+  background: #0bceaf;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: #0bceaf;
+}
+
+body{
+  
+  font-family: 'Lato', sans-serif;
+}
+.offset:before{
+  display: block;
+  content: "";
+  height: 4rem;
+  margin-top: -4rem;
+}
+
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  opacity: 0.9;
+}
+.navbar-brand img{
+  height: 2em;
+}
+
+.navbar-nav li{
+  padding-right: .7rem;
+}
+
+
+.carousel-item {
+  height: 30rem;
+}
+.carousel-inner, .item , img {
+  height: 100vh;
+  min-width: 100%;
+  background-color: #383832;
+}
+
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
+  .sld{
+    background-color: #ff6600;
+  }
+  
+
+
+/*media querie --*/
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+    
+}
+@media (max-width: 576px) {
+    
+}
+
+/*---- Firefox Bug fix ---*/
+.carousel-item {
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+/* ----- fixed backgroumd image --*/
+
+
+
+main{
+  display: grid;
+  grid-template-columns:1fr repeat(12, minmax(auto, 60px)) 1fr ;
+  grid-gap: 40px;
+  padding: 68px 0;
+  
+}
+
+.tetx--medium{
+  font-family: 'open', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #383832;
+
+}
+
+.cards{
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 60px));
+  grid-gap: 40px;
+}
+.card {
+  grid-column-end: span 4;
+  display: flex;
+  flex-direction: column;
+  background-color: #39393b;
+  cursor: pointer;
+  transition:all 0.3s ease 0s ;
+}
+.card:hover{
+ transform: translateY(-7px);
+ box-shadow: 5px 10px #383832;
+
+}
+.card_image-containr{
+ width: 100%;
+ padding-top: 56.25%;
+ overflow: hidden;
+ position: relative;
+}
+
+.card_image-containr img{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card_conten{
+  padding: 20px;
+}
+.card_title{
+  margin-bottom: 20px;
+}
+.card_info{
+  display: flex;
+  align-self: end;
+  align-items: center;
+}
+
+.car_price{
+  margin-left:auto ;
+  padding: 5px 20px;
+  background-color: #0bceaf;
+  color: white;
+  border-radius: 20px;
+}
+
+/*----- BOOTSTRAP PADDUNG FIX ___*/
+[class*="col-"] {
+  padding: 1em;
+}
+
+@media only screen and (max-width:700px ){
+  main{
+    grid-gap: 20px ;
+  }
+  .card{
+    grid-column-end: span 12;
+  }
+}
+
+
+
+@media only screen and (max-width:500px ){
+  main{
+    grid-template-columns: 10px repeat(6, 1fr) 10px;
+    grid-gap: 10px ;
+  }
+  .cards{
+    grid-column: 2 / span 6;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 28px;
+  }
+  .card{
+    grid-column-end: span 6;
+  }
+}
+
+
+/*----  Course section---------*/
+
+.narrow{
+  width: 75%;
+  margin: 1.5rem auto;
+  padding-top: 2rem;
+}
+
+.narrow h1{
+  font-size: 2.4rem;
+}
+
+.btn-secondary {
+  border-width: medium;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: .6rem 1.2rem;
+  margin: 1rem;
+  color: white;
+}
+
+/*------------*/
+
+
+.jumbotron {
+  margin-bottom: 0;
+  padding: 2rem 0 3.5rem;
+  border-radius: 0;
+}
+
+h3.heading{
+  font-size: 1.9rem;
+  font-weight:700;
+  text-transform: uppercase;
+  margin-bottom: 1.9rem;
+}
+
+.heading-underline {
+   width: 3rem;
+   height: .2rem;
+   background-color: #383832;
+   margin:0 auto 2rem ;
+}
+
+
+
+.feature svg.svg-inine--fa {
+  color: black;
+}
+
+.feature h3{
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  padding-bottom: .4rem;
+}
+
+.feature p {
+  font-size: 1.1rem;
+}
+html{
+  font-size: 80%;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #383832; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/*buttons */
+
+#btn{
+  color: white;
+  background: #0bceaf;
+}
+ 
+
+/*
+Extra small (xs) devices (portrait phones, less then 576px)
+no media query since this is the default in Bootstrap
+
+small (sm) devices (landscape phone, 576px and up)
+@media (min-with: 576px) { ... }
+
+medium (md) devices (tablets, 768px and up)
+@media (min-with: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-with: 992px) { ... }
+
+Extra (xl) devices (large desktops, 1200px and up)
+@media (min-with: 1200px) { ... }
+*/
+
